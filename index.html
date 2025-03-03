@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hadith Buddy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>HADITH BUDDY</h1>
+        <p>The Hadith of the Prophet Muhammad (ﷺ) at Your Fingertips</p>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button id="searchButton">Search</button>
+        <ul id="suggestions" class="suggestions-list"></ul>
+    </div>
+
+    <div class="content">
+        <div class="left-section">
+            <ul id="hadithBooks">
+                <li><a href="#" data-book="bukhari">Sahih al-Bukhari</a></li>
+                <li><a href="#" data-book="muslim">Sahih Muslim</a></li>
+                <li><a href="#" data-book="nasai">Sunan an-Nasa'i</a></li>
+                <li><a href="#" data-book="abudawud">Sunan Abi Dawud</a></li>
+                <li><a href="#" data-book="tirmidhi">Jami' at-Tirmidhi</a></li>
+                <li><a href="#" data-book="ibnmajah">Sunan Ibn Majah</a></li>
+                <li><a href="#" data-book="muwatta">Muwatta Malik</a></li>
+                <li><a href="#" data-book="ahmad">Musnad Ahmad</a></li>
+                <li><a href="#" data-book="darimi">Sunan ad-Darimi</a></li>
+            </ul>
+        </div>
+        <div class="right-section">
+            <h3>Hadith Information</h3>
+            <p id="hadithDetails">Click a book to see Hadith information.</p>
+        </div>
+    </div>
+
+    <div class="favorites-container">
+        <h2>Favorite Hadiths</h2>
+        <ul id="favorites-list"></ul>
+    </div>
+
+    <footer>
+        <p>Supported languages: English, Arabic, Urdu, Bangla</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('hadith-1.webp'); /* Set the background image */
+  background-size: cover; /* Ensure the image covers the full screen */
+  background-position: center; /* Center the image */
+  background-attachment: fixed; /* Make the image stay fixed while scrolling */
+  background-repeat: no-repeat; /* Prevent image repetition */
+  text-align: center;
+  color: #333; /* Improved text visibility */
+}
+
+header {
+  background-color: #2D696F;
+  color: white;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Search Bar */
+.search-container {
+  margin: 20px auto;
+  width: 60%;
+  position: relative;
+}
+
+input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #2D696F;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #1F4D52;
+}
+
+/* Autocomplete Suggestions */
+.autocomplete-list {
+  position: absolute;
+  background: #fff;
+  width: 70%;
+  border: 1px solid #ccc;
+  max-height: 150px;
+  overflow-y: auto;
+  text-align: left;
+  display: none;
+  z-index: 1000;
+  color: #333;
+}
+
+.autocomplete-list li {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.autocomplete-list li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Content Layout */
+.content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.left-section, .right-section {
+  width: 40%;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9); /* Slight transparency for better readability */
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+ul li:hover {
+  background-color: #F1F1F1;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #2D696F;
+  font-weight: bold;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Favorites Section */
+.favorites-container {
+  margin: 20px auto;
+  width: 60%;
+  background: rgba(255, 255, 255, 0.9); /* Improved readability */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.favorites-container h2 {
+  color: #2D696F;
+}
+
+#favorites-list {
+  text-align: left;
+}
+
+#favorites-list li {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#favorites-list li button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 500px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for better readability */
+  color: white;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .left-section, .right-section {
+    width: 90%;
+  }
+  .search-container {
+    width: 90%;
+  }
+  input {
+    width: 80%;
+  }
+  .autocomplete-list {
+    width: 80%;
+  }
+}
