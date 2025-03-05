@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     const query = localStorage.getItem("searchQuery");
     const hadithContainer = document.getElementById("hadith-container");
     const noResultsMessage = document.getElementById("no-results-message");
-    const apiKey = "$2y$10$OKcPUm4rlpk3kqUvHNGQO7GuNfqkOP1wiN2XBmHay4sAmaMdOW"; // ✅ Store API Key in Variable
 
     if (!query) {
         noResultsMessage.textContent = "No search query provided.";
@@ -18,8 +17,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             throw new Error("❌ API key is missing!");
         }
 
-        const response = await fetch(`https://api.sunnah.com/v1/hadiths/search/${encodeURIComponent(query)}`, {
-            headers: { "X-API-KEY": apiKey }
+        const response = await fetch(`https://hadithapi.com/api/sahih-bukhari/chapters?apiKey=%242y%2410%24imRVx8ZhnDdBGcKCABQ95ePS8VhQ6gFzUnWyIbR4xeYsGFDrGcnvC`, {
+
         });
 
         console.log("🔹 Response Status:", response.status);

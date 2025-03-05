@@ -104,8 +104,8 @@ document.addEventListener("DOMContentLoaded", () => {
       if (event.target.tagName === "A") {
           const book = event.target.dataset.book;
           try {
-              const response = await fetch(`https://api.sunnah.com/v1/collections/${book}`, {
-                  headers: { "X-API-KEY": "$2y$10$OKcPUm4rlpk3kqUvHNGQO7GuNfqkOP1wiN2XBmHay4sAmaMdOW" }
+              const response = await fetch(`https://hadithapi.com/api/sahih-bukhari/chapters?apiKey=%242y%2410%24imRVx8ZhnDdBGcKCABQ95ePS8VhQ6gFzUnWyIbR4xeYsGFDrGcnvC`, {
+                  
               });
               const data = await response.json();
               hadithDetails.innerHTML = `<strong>${data.collection.title}</strong>: ${data.collection.description}`;

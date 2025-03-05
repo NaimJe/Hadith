@@ -20,6 +20,39 @@ header {
   font-weight: bold;
 }
 
+/* Menu Container (If you have a menu.html) */
+.menu-container {
+  margin: 20px auto;
+  width: 60%;
+  background: rgba(255, 255, 255, 0.3); /* Slight transparency, adjust as needed */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-container h2 {
+  color: white; /* Ensure it's visible on the background */
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Make text pop */
+  background: rgba(0, 0, 0, 0.3); /* Dark overlay behind text */
+  padding: 10px;
+  display: inline-block;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+/* Ensures paragraph text under the heading is more visible */
+.menu-container p {
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.3);
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
 /* Search Bar */
 .search-container {
   margin: 20px auto;
@@ -132,25 +165,88 @@ ul li a:hover {
   color: #2D696F;
 }
 
-#favorites-list {
-  text-align: left;
-}
-
-#favorites-list li {
-  padding: 10px;
+/* For the add hadith form */
+.add-hadith-form {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
-#favorites-list li button {
-  background-color: red;
+.add-hadith-form input,
+.add-hadith-form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.add-hadith-form button {
+  background-color: #4CAF50;
   color: white;
+  padding: 10px;
   border: none;
-  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.add-hadith-form button:hover {
+  background-color: #45a049;
+}
+
+/* Favorites Table Styling */
+.favorites-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.favorites-table th,
+.favorites-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.favorites-table th {
+  background-color: #2D696F;
+  color: white;
+  font-weight: bold;
+}
+
+.favorites-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.favorites-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.edit-btn, .delete-btn {
+  padding: 8px 12px;
+  border: none;
   cursor: pointer;
   border-radius: 5px;
   font-size: 14px;
+}
+
+.edit-btn {
+  background-color: #f4a742;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #d6862c;
+}
+
+.delete-btn {
+  background-color: red;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: darkred;
 }
 
 /* Modal Styling */
@@ -173,6 +269,8 @@ ul li a:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
   max-width: 500px;
+  margin: auto; /* Ensure it's centered horizontally */
+  position: relative; /* For the close button positioning */
 }
 
 .close {
@@ -211,5 +309,11 @@ footer {
   }
   .autocomplete-list {
     width: 80%;
+  }
+  .favorites-container {
+    width: 90%;
+  }
+  .menu-container {
+    width: 90%;
   }
 }

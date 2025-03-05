@@ -12,7 +12,7 @@ app.whenReady().then(() => {
     }
   });
 
-  mainWindow.loadFile("index.html");
+  mainWindow.loadFile("menu.html");
 });
 
 app.on("window-all-closed", () => {

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favorites - Hadith Buddy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Hadith Buddy - Favorite Hadiths</h1>
+    <p>The Hadith of the Prophet Muhammad (ﷺ) at Your Fingertips</p>
+  </header>
+
+  <div class="favorites-container">
+    <h2>Your Favorite Hadiths</h2>
+
+    <!-- Form to Add a New Favorite Hadith -->
+    <div class="add-hadith-form">
+      <input type="text" id="hadithTitle" placeholder="Hadith Title">
+      <textarea id="hadithReflection" rows="3" placeholder="Your Reflection"></textarea>
+      <button id="addHadith">Add to Favorites</button>
+    </div>
+
+    <a href="menu.html" class="back-button">← Back to Menu</a>
+
+    <!-- Favorites Table -->
+    <table class="favorites-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Hadith Title</th>
+          <th>Personal Reflection</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="favoritesTableBody">
+        <!-- Favorite hadiths will be inserted here dynamically -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Edit Modal -->
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Edit Hadith</h3>
+      <input type="text" id="editHadithTitle" placeholder="Hadith Title">
+      <textarea id="editHadithReflection" rows="3" placeholder="Your Reflection"></textarea>
+      <button id="saveEdit">Save</button>
+    </div>
+  </div>
+
+  <script src="favorites.js"></script>
+</body>
+</html>
